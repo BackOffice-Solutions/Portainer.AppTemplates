@@ -1,13 +1,24 @@
 {
 	"version": "2",
-	"templates": 
-	[		
+	"templates": [
 		{
-	    "type": 3,
-	    "title": "Wordpress",
-	    "description": "Wordpress setup with a MySQL database",
-	    "note": "Deploys a Wordpress instance connected to a MySQL database.",
-	    "stackfile": "https://raw.githubusercontent.com/BackOffice-Solutions/Portainer.AppTemplates/main/docker-wordpress-stack.yml"
+			"type": 3,
+			"title": "Wordpress",
+			"description": "Wordpress setup with a MySQL database",
+			"note": "Deploys a Wordpress instance connected to a MySQL database.",
+			"stackfile": "https://raw.githubusercontent.com/BackOffice-Solutions/Portainer.AppTemplates/main/docker-wordpress-stack.yml",
+			"env": [
+				{
+					"name": "DB_ROOT_PASSWORD",
+					"label": "DB root password",
+					"description": "Das root-Kennwort für die MySQL-Datenbank"
+				},
+				{
+					"name": "APP_PORT",
+					"label": "Public TCP/IP-Port",
+					"description": "Der TCP/IP-Port unter dem die Seite veröffentlicht wird."
+				}
+			]
 		}
 	]
 }
