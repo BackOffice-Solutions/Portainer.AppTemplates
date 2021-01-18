@@ -1,0 +1,24 @@
+[
+	{
+		"type": 2,
+		"title": "Wordpress",
+		"description": "Wordpress setup with a MySQL database",
+		"note": "Deploys a Wordpress instance connected to a MySQL database.",
+		"repository": {
+			"url": "https://github.com/BackOffice-Solutions/Portainer.AppTemplates",
+			"stackfile": "docker-wordpress-stack.yml"
+		},
+		"env": [
+			{
+				"name": "DB_ROOT_PASSWORD",
+				"label": "DB root password",
+				"description": "Das root-Kennwort für die MySQL-Datenbank"
+			},
+			{
+				"name": "APP_PORT",
+				"label": "Public TCP/IP-Port",
+				"description": "Der TCP/IP-Port unter dem die Seite veröffentlicht wird."
+			}
+		]
+	}
+]
