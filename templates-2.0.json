@@ -2,11 +2,14 @@
 	"version": "2",
 	"templates": [
 		{
-			"type": 3,
+			"type": 2,
 			"title": "Wordpress",
 			"description": "Wordpress setup with a MySQL database",
 			"note": "Deploys a Wordpress instance connected to a MySQL database.",
-			"stackfile": "https://raw.githubusercontent.com/BackOffice-Solutions/Portainer.AppTemplates/main/docker-wordpress-stack.yml",
+			"repository": {
+				"url": "https://github.com/BackOffice-Solutions/Portainer.AppTemplates",
+				"stackfile": "docker-wordpress-stack.yml"
+			},
 			"env": [
 				{
 					"name": "DB_ROOT_PASSWORD",
