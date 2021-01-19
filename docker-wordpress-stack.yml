@@ -31,9 +31,6 @@ services:
          define('MEMORY_LIMIT', '256M');
          define('MAX_EXECUTION_TIME', '300');
          define('MAX_INPUT_TIME', '300' );
-         # define('FORCE_SSL_ADMIN', false);
-         # define('DISALLOW_FILE_MODS', false);
-         # define('DISALLOW_FILE_EDIT', false);
 
 volumes:
     db_data:    
