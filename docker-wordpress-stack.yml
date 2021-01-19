@@ -25,6 +25,15 @@ services:
        WORDPRESS_DB_HOST: db:3306
        WORDPRESS_DB_USER: wordpress
        WORDPRESS_DB_PASSWORD: wordpress
+       WORDPRESS_CONFIG_EXTRA: |
+         define( 'upload_max_filesize', '512M' );
+         define( 'post_max_size', '128M' );
+         define( 'memory_limit', '256M' );
+         define( 'max_execution_time', '300' );
+         define( 'max_input_time', '300' );
+         # define( 'FORCE_SSL_ADMIN', false );
+         # define( 'DISALLOW_FILE_MODS', false );
+         # define( 'DISALLOW_FILE_EDIT', false );
 
 volumes:
     db_data:    
